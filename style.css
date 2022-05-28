@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Roboto:wght@500&display=swap');
+
+
+body {
+    background-color: #F7F5FA;
+    height: 200vh;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(109,146,191,1) 100%);
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.0rem;
+    text-align: center;
+}
+
+
+.add-task-container {
+    width: 55%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+}
+
+
+#input-task {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.5rem;
+    width: 70%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid gray;
+    outline: 0;
+    margin-right: 5px;
+}
+#input-task:focus {
+    border-bottom: 3px solid dodgerblue;
+}
+#input-task:focus::placeholder {
+    color: transparent;
+}
+
+
+#add-task-button {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    padding: 5px;
+    width: 20%;
+    margin-bottom: 5px;
+    background-color: dodgerblue;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s linear;
+}
+
+#add-task-button:hover {
+    background-color: royalblue;
+}
+
+ul {
+    width: 55%;
+    margin: 50px auto auto;
+    padding-inline-start: 0;
+}
+
+ul li {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.5rem;
+    list-style-type: none;
+    display: flex;
+    align-self: center;
+    margin: 6px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+
+}
+
+li img {
+    height: 20px;
+    width: 20px;
+    color: red;
+}
+
+/*checkbox perzonalization*/
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + .task label {
+    cursor: pointer;
+}
+
+label:before {
+    content: '';
+    background: transparent;
+    border: 2px solid gray;
+    border-radius: 5px;
+    display: inline-block;
+    height: 25px;
+    margin-right: 20px;
+    text-align: center;
+    vertical-align: middle;
+    width: 25px;
+}
+
+input[type="checkbox"]:checked + .task label::before {
+    content: "";
+    background: url("true.png");
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+
+}
+
+input[type="checkbox"]:checked + .task {
+    text-decoration: line-through;
+}
+
+
+.delete-btn {
+    transform: scale(1.7);
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: red;
+}
